@@ -1,0 +1,17 @@
+*{
+    margin: 0%;
+    
+}
+
+.bg{
+    background-image: url('bg.png');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 , p {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

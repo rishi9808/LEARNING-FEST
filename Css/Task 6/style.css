@@ -1,0 +1,14 @@
+.outer-box{
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-box{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}

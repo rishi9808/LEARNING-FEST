@@ -1,0 +1,14 @@
+.main{
+    display:flex;
+    flex-direction: column;
+    padding: auto;
+    margin: 50px;
+}
+.row1,.row3{
+    display: flex;
+    justify-content: space-around;
+}
+.row2{
+    
+    text-align: center;
+}

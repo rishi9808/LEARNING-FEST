@@ -1,0 +1,17 @@
+.border1{
+    border: 5px solid red;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.border2{
+    border: 5px solid red;
+    padding: 10px;
+    border-radius: 40px 20px;
+    margin: 10px;
+}

@@ -1,0 +1,10 @@
+h1{
+    color: gray;
+}
+
+div{
+    text-align: center;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    padding: 20px;
+    margin: 20px;
+}

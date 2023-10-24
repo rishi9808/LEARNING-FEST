@@ -1,0 +1,20 @@
+.box{
+    border: 1px solid black;
+    padding: 40px;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+.boxes-row-1,.boxes-row-4{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.boxes-row-2,.boxes-row-3{
+    display: flex;
+    justify-content:center;
+    gap: 300px;
+    margin-top: 8px;
+}
+
