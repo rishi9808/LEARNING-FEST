@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    form {
+      width: 300px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #error-message {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<form id="myForm" onsubmit="validateForm(event)">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email">
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password">
+
+  <button type="submit">Submit</button>
+
+  <div id="error-message"></div>
+</form>
+
+<script>
+  function validateForm(event) {
+    // Prevent the form from submitting by default
+    event.preventDefault();
+
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Validate non-empty fields
+    if (name.trim() === '' || email.trim() === '' || password.trim() === '') {
+      displayErrorMessage('All fields are required');
+      return;
+    }
+
+    // Validate email format using a simple regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      displayErrorMessage('Enter a valid email address');
+      return;
+    }
+
+    // If all validations pass, submit the form (you can replace this with your form submission logic)
+    alert('Form submitted successfully!');
+  }
+
+  function displayErrorMessage(message) {
+    const errorMessageElement = document.getElementById('error-message');
+    errorMessageElement.textContent = message;
+  }
+</script>
+
+</body>
+</html>
